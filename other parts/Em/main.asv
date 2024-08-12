@@ -1,0 +1,20 @@
+%time=0;
+%tim2=zeros(1,10);
+       %[data_set,incompleted_data_set,pmf] = generate_data_set2(50000,5,5,0.8,5);
+       %tic;
+       for i=1:5
+           tic
+           [pmf1,alphaanalyzer,normanalyzer]=pmf_est_squarem(incompleted_data_set,5,5,0.0000001,500);
+           timeinfo(i,)
+           info=[alphaanalyzer;normanalyzer];
+           alphainfo{i}=info;
+       [pmf1,iter]=pmf_est_Em(incompleted_data_set,5,5,0.0000001,1500);
+       %end
+       %time=toc;
+       %tic;
+       %pmf2=pmf_est_squarem(data_set,5,10,5000);
+       %tim2(i)=tim2(i)+toc;
+
+
+%avg2=tim2./10;
+%plot(1:10,avg1,1:10,avg2);

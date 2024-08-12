@@ -1,0 +1,10 @@
+
+N=100;
+r=zeros(5,100);
+for j=5:10
+    for i=1:
+        U=cpd_rnd([5 5 5 5 5],5);
+        T=cpdgen(U);
+        r(j,i)=rankest(T);
+    end
+end

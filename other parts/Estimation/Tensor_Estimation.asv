@@ -1,0 +1,15 @@
+m=1000;
+n=5;
+alphabet=5;
+f=7;
+data = unidrnd(alphabet,m,n);
+empirical_triplets=empirical_triplets_gen(data,alphabet,m,n);
+lambda=init_lambda(7);
+matrices=init_matrices(n,alphabet,f);
+r=10;
+for i=1:r
+    for j=1:n
+      aj = admm(x,)
+    end
+solve opti2 
+end

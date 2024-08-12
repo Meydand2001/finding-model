@@ -1,0 +1,16 @@
+load data_set_model.mat;
+S=1;
+data_set=data_set_model{2};
+alphabet=5;
+model_order=size(data_set_model{3},1);
+g_alphabet=[3,3,3];
+M=size(data_set_model{4},1);
+array_of_sizes=data_set_model{5}(:,2);
+fld=data_set_model{5}(:,3);
+max_iterations=100; epsilon=10^-5;
+param_accuracy=zeros(S,1);
+kld_accuracy=zeros(S,1);
+lambda1=data_set_model{3};
+b_matrices1=data_set_model{4};
+a_tensors1=data_set_model{5}(:,1);
+pmf=hm2pmf(lambda1,b_matrices1,a_tensors1,3,alphabet,M,g_alphabet,5,fld);
